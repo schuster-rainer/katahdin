@@ -1,0 +1,18 @@
+module CSharp
+{
+    class Whitespace
+    {
+        pattern
+        {
+            (" " | "\t")+
+        }
+    }
+    
+    class EndOfLine
+    {
+        pattern
+        {
+            ("\r" "\n"? | "\n")*
+        }
+    }
+}

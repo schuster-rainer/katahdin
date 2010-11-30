@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7904E035-E14C-4BC0-8DBB-E90E8ED7DC46}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Katahdin.Tests</RootNamespace>
+    <AssemblyName>Katahdin.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.7.10213, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <HintPath>..\..\tools\Nunit\nunit.framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="runtime\MultisetTest.cs" />
+    <Compile Include="runtime\ParametersOut.cs" />
+    <Compile Include="runtime\ParseTreeTest.cs" />
+    <Compile Include="runtime\PrecedenceTest.cs" />
+    <Compile Include="runtime\TextEscapeTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="empty.kat" />
+    <None Include="hello.kat" />
+    <None Include="language\classes.kat" />
+    <None Include="language\comments.kat" />
+    <None Include="language\control.kat" />
+    <None Include="language\escapes.kat" />
+    <None Include="language\inheritance.kat" />
+    <None Include="language\logic.kat" />
+    <None Include="language\maths.kat" />
+    <None Include="language\parameters-out.kat" />
+    <None Include="language\return.kat" />
+    <None Include="language\types.kat" />
+    <None Include="language\userdefined.kat" />
+    <None Include="library\dictionary.kat" />
+    <None Include="library\for.kat" />
+    <None Include="library\fortran\arithmetic.f" />
+    <None Include="library\fortran\assign.f" />
+    <None Include="library\fortran\comments.f" />
+    <None Include="library\fortran\empty.f" />
+    <None Include="library\fortran\goto.f" />
+    <None Include="library\fortran\if.f" />
+    <None Include="library\fortran\parameters-in.f" />
+    <None Include="library\fortran\parameters-out.f" />
+    <None Include="library\fortran\print.f" />
+    <None Include="library\fortran\real.f" />
+    <None Include="library\fortran\subroutine.f" />
+    <None Include="library\fortran\types.f" />
+    <None Include="library\list.kat" />
+    <None Include="library\operators.kat" />
+    <None Include="library\subscript.kat" />
+    <None Include="library\test-indentation.kat" />
+    <None Include="library\test-sqlite.kat" />
+    <None Include="parser-stress.kat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="library\python\arithmetic.py" />
+    <Content Include="library\python\assign.py" />
+    <Content Include="library\python\empty.py" />
+    <Content Include="library\python\for.py" />
+    <Content Include="library\python\function.py" />
+    <Content Include="library\python\indentation.py" />
+    <Content Include="library\python\parameters.py" />
+    <Content Include="library\python\print.py" />
+    <Content Include="library\python\tupple.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Katahdin\Katahdin.csproj">
+      <Project>{C8FF22D7-AF5A-473F-84B6-D60D8BF6FF7A}</Project>
+      <Name>Katahdin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

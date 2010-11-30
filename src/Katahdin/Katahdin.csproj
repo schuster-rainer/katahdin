@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C8FF22D7-AF5A-473F-84B6-D60D8BF6FF7A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Katahdin</RootNamespace>
+    <AssemblyName>Katahdin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BlockComment.cs" />
+    <Compile Include="Base\class\ClassStatement.cs" />
+    <Compile Include="Base\class\ConstructorMember.cs" />
+    <Compile Include="Base\class\FieldMember.cs" />
+    <Compile Include="Base\class\Member.cs" />
+    <Compile Include="Base\class\MethodMember.cs" />
+    <Compile Include="Base\class\PatternMember.cs" />
+    <Compile Include="Base\DefaultWhitespace.cs" />
+    <Compile Include="Base\expressions\AddExpression.cs" />
+    <Compile Include="Base\expressions\AdditiveExpression.cs" />
+    <Compile Include="Base\expressions\AndExpression.cs" />
+    <Compile Include="Base\expressions\AsExpression.cs" />
+    <Compile Include="Base\expressions\AssignExpression.cs" />
+    <Compile Include="Base\expressions\AssignmentExpression.cs" />
+    <Compile Include="Base\expressions\CallExpression.cs" />
+    <Compile Include="Base\expressions\CallInParentScopeExpression.cs" />
+    <Compile Include="Base\expressions\ComparisonExpression.cs" />
+    <Compile Include="Base\expressions\DivideExpression.cs" />
+    <Compile Include="Base\expressions\EqualityExpression.cs" />
+    <Compile Include="Base\expressions\Expression.cs" />
+    <Compile Include="Base\expressions\GreaterExpression.cs" />
+    <Compile Include="Base\expressions\GreaterOrEqualExpression.cs" />
+    <Compile Include="Base\expressions\InequalityExpression.cs" />
+    <Compile Include="Base\expressions\IsExpression.cs" />
+    <Compile Include="Base\expressions\JunctionExpression.cs" />
+    <Compile Include="Base\expressions\LessExpression.cs" />
+    <Compile Include="Base\expressions\LessOrEqualExpression.cs" />
+    <Compile Include="Base\expressions\MemberExpression.cs" />
+    <Compile Include="Base\expressions\MultiplicativeExpression.cs" />
+    <Compile Include="Base\expressions\MultiplyExpression.cs" />
+    <Compile Include="Base\expressions\NameExpression.cs" />
+    <Compile Include="Base\expressions\NewExpression.cs" />
+    <Compile Include="Base\expressions\NotExpression.cs" />
+    <Compile Include="Base\expressions\ParenExpression.cs" />
+    <Compile Include="Base\expressions\SubtractExpression.cs" />
+    <Compile Include="Base\expressions\TypeExpression.cs" />
+    <Compile Include="Base\expressions\UnaryExpression.cs" />
+    <Compile Include="Base\expressions\ValueExpression.cs" />
+    <Compile Include="Base\LineComment.cs" />
+    <Compile Include="Base\Name.cs" />
+    <Compile Include="Base\Number.cs" />
+    <Compile Include="Base\pattern\AltPatternExpression.cs" />
+    <Compile Include="Base\pattern\AndPatternExpression.cs" />
+    <Compile Include="Base\pattern\AnyPatternExpression.cs" />
+    <Compile Include="Base\pattern\BlockPatternExpression.cs" />
+    <Compile Include="Base\pattern\LabelPatternExpression.cs" />
+    <Compile Include="Base\pattern\NotPatternExpression.cs" />
+    <Compile Include="Base\pattern\Option.cs" />
+    <Compile Include="Base\pattern\ParenPatternExpression.cs" />
+    <Compile Include="Base\pattern\PatternExpression.cs" />
+    <Compile Include="Base\pattern\RangePatternExpression.cs" />
+    <Compile Include="Base\pattern\ReferencePatternExpression.cs" />
+    <Compile Include="Base\pattern\RepeatPatternExpression.cs" />
+    <Compile Include="Base\pattern\SequencePatternExpression.cs" />
+    <Compile Include="Base\pattern\TextPatternExpression.cs" />
+    <Compile Include="Base\pattern\TokenPatternExpression.cs" />
+    <Compile Include="Base\Program.cs" />
+    <Compile Include="Base\statements\CompoundStatement.cs" />
+    <Compile Include="Base\statements\ExpressionStatement.cs" />
+    <Compile Include="Base\statements\FunctionStatement.cs" />
+    <Compile Include="Base\statements\IfStatement.cs" />
+    <Compile Include="Base\statements\ImportStatement.cs" />
+    <Compile Include="Base\statements\ModuleStatement.cs" />
+    <Compile Include="Base\statements\PrintStatement.cs" />
+    <Compile Include="Base\statements\ReturnStatement.cs" />
+    <Compile Include="Base\statements\SetPrecedenceStatement.cs" />
+    <Compile Include="Base\statements\Statement.cs" />
+    <Compile Include="Base\statements\ThrowStatement.cs" />
+    <Compile Include="Base\statements\TopLevelStatement.cs" />
+    <Compile Include="Base\statements\TryStatement.cs" />
+    <Compile Include="Base\statements\UsingStatement.cs" />
+    <Compile Include="Base\statements\WhileStatement.cs" />
+    <Compile Include="Base\String.cs" />
+    <Compile Include="Base\Whitespace.cs" />
+    <Compile Include="ClrObjectMethodBinding.cs" />
+    <Compile Include="CodeTree\AssignNode.cs" />
+    <Compile Include="CodeTree\CallNode.cs" />
+    <Compile Include="CodeTree\CodeTreeNode.cs" />
+    <Compile Include="CodeTree\ConvertNode.cs" />
+    <Compile Include="CodeTree\GetToRunNode.cs" />
+    <Compile Include="CodeTree\IfNode.cs" />
+    <Compile Include="CodeTree\MemberNode.cs" />
+    <Compile Include="CodeTree\NameNode.cs" />
+    <Compile Include="CodeTree\NewNode.cs" />
+    <Compile Include="CodeTree\ObjectNode.cs" />
+    <Compile Include="CodeTree\OperationNode.cs" />
+    <Compile Include="CodeTree\PrintNode.cs" />
+    <Compile Include="CodeTree\ReturnNode.cs" />
+    <Compile Include="CodeTree\SeqNode.cs" />
+    <Compile Include="CodeTree\ThrowNode.cs" />
+    <Compile Include="CodeTree\TryNode.cs" />
+    <Compile Include="CodeTree\ValueNode.cs" />
+    <Compile Include="CodeTree\WhileNode.cs" />
+    <Compile Include="Collections\Multiset.cs" />
+    <Compile Include="Collections\OrderedSet.cs" />
+    <Compile Include="Collections\Set.cs" />
+    <Compile Include="Collections\Stack.cs" />
+    <Compile Include="Collections\Tupple.cs" />
+    <Compile Include="CommandLine.cs" />
+    <Compile Include="Compiler\Block.cs" />
+    <Compile Include="Compiler\BlockInstruction.cs" />
+    <Compile Include="Compiler\BlockLabel.cs" />
+    <Compile Include="Compiler\BlockLocal.cs" />
+    <Compile Include="Compiler\BlockOperation.cs" />
+    <Compile Include="Compiler\ClassBuilder.cs" />
+    <Compile Include="Compiler\CompilerModule.cs" />
+    <Compile Include="Compiler\ConstructorBuilderProxy.cs" />
+    <Compile Include="Compiler\DynamicMethodProxy.cs" />
+    <Compile Include="Compiler\IBlockLine.cs" />
+    <Compile Include="Compiler\IMethodBuilder.cs" />
+    <Compile Include="Compiler\Instruction.cs" />
+    <Compile Include="Compiler\MethodBuilderProxy.cs" />
+    <Compile Include="ConsoleParseTrace.cs" />
+    <Compile Include="Grammars\AbstractPattern.cs" />
+    <Compile Include="Grammars\AltNode.cs" />
+    <Compile Include="Grammars\Alts\Alt.cs" />
+    <Compile Include="Grammars\Alts\LongestAlt.cs" />
+    <Compile Include="Grammars\Alts\PrecedenceAlt.cs" />
+    <Compile Include="Grammars\Alts\PrecedenceAltGroup.cs" />
+    <Compile Include="Grammars\AndNode.cs" />
+    <Compile Include="Grammars\AnyNode.cs" />
+    <Compile Include="Grammars\BootstrapParser.cs" />
+    <Compile Include="Grammars\CharNode.cs" />
+    <Compile Include="Grammars\CharRange.cs" />
+    <Compile Include="Grammars\ConcretePattern.cs" />
+    <Compile Include="Grammars\FailNode.cs" />
+    <Compile Include="Grammars\Grammar.cs" />
+    <Compile Include="Grammars\GrammarTrace.cs" />
+    <Compile Include="Grammars\IParseable.cs" />
+    <Compile Include="Grammars\LabelNode.cs" />
+    <Compile Include="Grammars\NotNode.cs" />
+    <Compile Include="Grammars\Optional.cs" />
+    <Compile Include="Grammars\OptionsNode.cs" />
+    <Compile Include="Grammars\ParseGraphNode.cs" />
+    <Compile Include="Grammars\ParserBlock.cs" />
+    <Compile Include="Grammars\Pattern.cs" />
+    <Compile Include="Grammars\PatternNode.cs" />
+    <Compile Include="Grammars\PatternTrampoline.cs" />
+    <Compile Include="Grammars\Precedences\Group.cs" />
+    <Compile Include="Grammars\Precedences\Precedence.cs" />
+    <Compile Include="Grammars\Precedences\Relation.cs" />
+    <Compile Include="Grammars\RecursionBehaviour.cs" />
+    <Compile Include="Grammars\RepNode.cs" />
+    <Compile Include="Grammars\Reps.cs" />
+    <Compile Include="Grammars\SeqNode.cs" />
+    <Compile Include="Grammars\TextNode.cs" />
+    <Compile Include="Grammars\TokenNode.cs" />
+    <Compile Include="Grammars\UserDefinedNode.cs" />
+    <Compile Include="Handler.cs" />
+    <Compile Include="ICallable.cs" />
+    <Compile Include="IScope.cs" />
+    <Compile Include="ISourced.cs" />
+    <Compile Include="Lexer.cs" />
+    <Compile Include="Method.cs" />
+    <Compile Include="MethodScope.cs" />
+    <Compile Include="Module.cs" />
+    <Compile Include="MultiplexTextWriter.cs" />
+    <Compile Include="ObjectMethodBinding.cs" />
+    <Compile Include="ParseDelegate.cs" />
+    <Compile Include="ParseException.cs" />
+    <Compile Include="ParserMemoryEntry.cs" />
+    <Compile Include="ParserMemoryKey.cs" />
+    <Compile Include="ParserState.cs" />
+    <Compile Include="ParseTrace.cs" />
+    <Compile Include="ParseTree.cs" />
+    <Compile Include="PathResolver.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runtime.cs" />
+    <Compile Include="RuntimeObject.cs" />
+    <Compile Include="RuntimeState.cs" />
+    <Compile Include="Signal.cs" />
+    <Compile Include="Source.cs" />
+    <Compile Include="StateForCompiler.cs" />
+    <Compile Include="TextEscape.cs" />
+    <Compile Include="TypeNames.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
